@@ -9,7 +9,7 @@ public class Main {
         List<Rental> rentals = new ArrayList<>();
 
         try (Scanner scanner = new Scanner(new File ("rentals.txt")) {
-            if (!scanner.hasNextInt()) return;
+            if (scanner.hasNextInt()) return;
             int totalRecords = scanner.nextInt();
             
             Rental[] rentals = new Rental[totalRecords];
