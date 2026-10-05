@@ -19,8 +19,8 @@ public class Main {
             } else if (line.startsWith("INSERT")) {
                 String[] parts = line.split(" ", 3);
                 if (parts.length >= 3) {
-                    int index = Integer.parseInt(parts[1]);
-                    String song = parts[2].trim();
+                    int index = Integer.parseInt(parts[0]);
+                    String song = parts[1].trim();
                     playlist.add(index, song);
                 }
             } else if (line.startsWith("REMOVE")) {
@@ -53,10 +53,10 @@ public class Main {
         sc2.close();
 
         System.out.println("Unique participants: " + uniqueParticipants.size());
-        int index = 1;
+        int number = 1;
         for (String participant : uniqueParticipants) {
-            System.out.println(index + ". " + participant);
-            index++;
+            System.out.println(number + ". " + participant);
+            number++;
         }
         System.out.println("Duplicate registrations: " + duplicateCount);
 
