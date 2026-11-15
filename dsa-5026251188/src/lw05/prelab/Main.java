@@ -19,8 +19,7 @@ public class Main {
         }
         System.out.println();
     }
-
-    // ================= BFS =================
+    
     static List<Integer> bfs(int start) {
         List<Integer> order = new ArrayList<>();
         Set<Integer> visited = new HashSet<>();
@@ -42,7 +41,6 @@ public class Main {
         return order;
     }
 
-    // ================= DFS =================
     static void dfs(int current, Set<Integer> visited) {
         visited.add(current);                               
         dfsOrder.add(current);
@@ -52,8 +50,6 @@ public class Main {
             }
         }
     }
-
-    // ================= Dijkstra =================
     static void dijkstraAlg(int start, int dest) {
         int[] dist = new int[size];
         int[] prev = new int[size];
