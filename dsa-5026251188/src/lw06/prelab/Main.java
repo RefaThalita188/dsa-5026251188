@@ -71,7 +71,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(Main.class.getResourceAsStream("/treenumbers.txt"));
+        Scanner sc = new Scanner(Main.class.getResourceAsStream("treenumbers.txt"));
         Node root = null;
 
         String[] values = sc.nextLine().trim().split("\\s+");
